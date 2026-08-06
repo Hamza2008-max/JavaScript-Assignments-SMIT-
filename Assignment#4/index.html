@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <main class="container">
+        <section class="card" id="login-section">
+            <h1>Login</h1>
+            <p>Enter your email and password to continue.</p>
+            <p>If you're Admin then Enter admin@gmail.com as email and your any type of password to continue.</p>
+            <form id="login-form">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required />
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter password" required />
+
+                <button type="submit">Sign In</button>
+                <p class="error-message" id="error-message"></p>
+            </form>
+        </section>
+
+        <section class="card hidden" id="dashboard-section">
+            <h1>Dashboard</h1>
+            <p>Welcome! You have successfully logged in.</p>
+            <button id="logout-button">Log out</button>
+        </section>
+    </main>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
