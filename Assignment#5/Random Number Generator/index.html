@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Number Generator</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="app">
+        <header class="app-header">
+            <h1>Random Number Generator</h1>
+            <p class="sub">Guess a number between <strong>1</strong> and <strong>10</strong></p>
+        </header>
+
+        <section class="card">
+            <div class="controls">
+                <input id="guessInput" type="number" min="1" max="10" placeholder="Enter 1 - 10">
+                <button id="checkBtn" class="btn primary">Check</button>
+                <button id="revealBtn" class="btn ghost">Reveal</button>
+            </div>
+
+            <div id="message" class="message" aria-live="polite"></div>
+
+            <div class="meta">
+                <span id="lastGuess" class="chip hidden"></span>
+                <span id="storedNumber" class="chip hidden"></span>
+            </div>
+
+            <button id="playAgain" class="btn play hidden">Try Again</button>
+        </section>
+
+        <footer class="footer">Made with ❤️ — Responsive & Cool</footer>
+    </main>
+
+    <script src="index.js"></script>
+</body>
+</html>

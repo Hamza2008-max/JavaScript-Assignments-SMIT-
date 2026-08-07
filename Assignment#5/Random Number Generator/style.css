@@ -1,0 +1,67 @@
+:root{
+	--bg:#0f1724;
+	--card:#0b1220;
+	--accent:#7c3aed;
+	--muted:#94a3b8;
+	--success:#16a34a;
+	--danger:#ef4444;
+	--glass: rgba(255,255,255,0.04);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+	margin:0;
+	font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+	background: radial-gradient(1000px 600px at 10% 10%, rgba(124,58,237,0.08), transparent),
+							linear-gradient(180deg, #071023, #06121a 60%);
+	color:#e6eef8;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	padding:32px;
+}
+
+.app{width:100%;max-width:760px}
+.app-header{text-align:center;margin-bottom:18px}
+.app-header h1{margin:0;font-size:1.6rem;letter-spacing:-0.02em}
+.sub{color:var(--muted);margin-top:6px}
+
+.card{
+	background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+	border-radius:12px;
+	padding:24px;
+	box-shadow: 0 8px 30px rgba(2,6,23,0.7);
+	border:1px solid rgba(255,255,255,0.03);
+}
+
+.controls{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+input[type=number]{
+	-moz-appearance:textfield;
+	appearance:textfield;
+	width:160px;padding:10px 12px;border-radius:10px;border:1px solid rgba(255,255,255,0.06);
+	background:var(--glass);color:inherit;font-size:1rem;outline:none
+}
+input[type=number]::placeholder{color:var(--muted)}
+
+.btn{padding:10px 14px;border-radius:10px;border:0;cursor:pointer;font-weight:600}
+.btn.primary{background:linear-gradient(90deg,var(--accent),#5b21b6);color:white}
+.btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--muted)}
+.btn.play{width:100%;margin-top:14px;background:rgba(255,255,255,0.03)}
+
+.message{margin-top:18px;padding:14px;border-radius:10px;background:rgba(255,255,255,0.02);color:var(--muted)}
+.message.success{border-left:4px solid var(--success);color:#d1fae5;background:linear-gradient(90deg, rgba(22,163,74,0.06), rgba(255,255,255,0.01))}
+.message.fail{border-left:4px solid var(--danger);color:#fee2e2;background:linear-gradient(90deg, rgba(239,68,68,0.04), rgba(255,255,255,0.01))}
+
+.meta{margin-top:12px;display:flex;gap:8px;align-items:center}
+.chip{padding:6px 10px;border-radius:999px;background:rgba(255,255,255,0.02);color:var(--muted);font-size:.9rem}
+.hidden{display:none}
+
+.footer{text-align:center;color:var(--muted);margin-top:14px;font-size:.85rem}
+
+@media (max-width:520px){
+	.controls{flex-direction:column;align-items:stretch}
+	input[type=number]{width:100%}
+	.btn{width:100%}
+}
+
