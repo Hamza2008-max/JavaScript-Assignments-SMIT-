@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Assignment</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <main class="page">
+        <h1>DOM Assignment</h1>
+
+        <section id="form-content" class="content">
+            <h2>Form Content</h2>
+            <label for="first-name">First Name</label>
+            <input type="text" id="first-name">
+
+            <label for="last-name">Last Name</label>
+            <input type="text" id="last-name">
+
+            <label for="email">Email</label>
+            <input type="email" id="email">
+        </section>
+
+        <section id="main-content" class="content">
+            <p class="render">First Name: Alex</p>
+            <p class="render" id="lastName">Last Name: Bank</p>
+            <p class="render">Email: alexbank@example.com</p>
+            <p class="render">Country: Pakistan</p>
+            <p class="render">Contact: +92 300 1234567</p>
+        </section>
+
+        <section class="results content">
+            <h2>JavaScript Output</h2>
+            <h3>Child elements of <code>main-content</code></h3>
+            <ul id="child-elements-output"></ul>
+
+            <h3>Inner HTML of elements with class <code>render</code></h3>
+            <ul id="render-output"></ul>
+        </section>
+    </main>
+</body>
+</html>
