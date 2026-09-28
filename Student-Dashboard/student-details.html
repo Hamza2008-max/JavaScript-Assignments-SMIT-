@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090b14">
+  <title>Student details | Student Portal</title>
+  <link rel="preconnect" href="https://api.dicebear.com">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="detail-body">
+  <div class="page-loader" id="page-loader" role="status" aria-live="polite"><span class="loader-orbit"></span><span>Loading student record...</span></div>
+  <main class="detail-page" id="detail-page">
+    <header class="detail-topbar"><a class="back-link" href="dashboard.html"><span aria-hidden="true">&#8592;</span> Back to dashboard</a><a class="profile-chip" href="Login.html"><span class="admin-avatar">AD</span><span>Admin</span></a></header>
+    <div id="student-record" aria-live="polite"></div>
+  </main>
+  <div class="toast-region" id="toast-region" aria-live="polite" aria-atomic="true"></div>
+  <script src="app.js"></script>
+</body>
+</html>
+
+

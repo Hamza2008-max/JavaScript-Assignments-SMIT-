@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090b14">
+  <title>Dashboard | Student Portal</title>
+  <link rel="preconnect" href="https://api.dicebear.com">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-loader" id="page-loader" role="status" aria-live="polite"><span class="loader-orbit"></span><span>Loading workspace...</span></div>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <div class="app-layout" id="app-layout">
+    <aside class="sidebar" id="sidebar" aria-label="Primary navigation">
+      <a class="brand" href="#overview" aria-label="Student Portal home"><img src="logo.svg" alt="" width="42" height="42"><span><strong>Student Portal</strong><small>Admin workspace</small></span></a>
+      <nav class="side-nav">
+        <a class="nav-item active" href="#overview" data-nav="overview"><span aria-hidden="true">&#9670;</span> Overview</a>
+        <a class="nav-item" href="#students" data-nav="students"><span aria-hidden="true">&#9783;</span> Students</a>
+        <a class="nav-item" href="#attendance" data-nav="attendance"><span aria-hidden="true">&#10003;</span> Attendance</a>
+      </nav>
+      <div class="sidebar-footer"><div class="admin-avatar">AD</div><div><strong>Administrator</strong><small>Portal manager</small></div><a class="logout-link" data-action="logout" href="Login.html" title="Log out" aria-label="Log out">&#8594;</a></div>
+    </aside>
+    <main class="dashboard-main" id="main-content">
+      <header class="topbar">
+        <div class="topbar-title"><button class="icon-button mobile-menu" id="mobile-menu" type="button" aria-label="Open navigation" aria-expanded="false">&#9776;</button><div><p class="eyebrow">Monday, 28 September</p><h1>Good morning, Admin.</h1></div></div>
+        <div class="topbar-actions"><button class="icon-button" id="reset-data" type="button" title="Restore sample data" aria-label="Restore sample data">&#8635;</button><a class="profile-chip" href="Login.html"><span class="admin-avatar">AD</span><span>Admin</span></a></div>
+      </header>
+      <section class="welcome-panel" id="overview" aria-labelledby="welcome-heading">
+        <div><p class="eyebrow accent">Student command center</p><h2 id="welcome-heading">Keep every learner moving forward.</h2><p>Manage your roster, track attendance, and open a complete student record in a few clicks.</p><button class="button button-primary" type="button" data-action="open-add"><span aria-hidden="true">+</span> Add student</button></div>
+        <div class="welcome-orb" aria-hidden="true"><span></span><strong id="welcome-total">0</strong><small>students</small></div>
+      </section>
+      <section class="metrics" aria-label="Student statistics">
+        <article class="metric-card"><span class="metric-icon blue">&#9783;</span><div><span>Total students</span><strong id="metric-total">0</strong><small id="metric-total-note">Roster is loading</small></div></article>
+        <article class="metric-card"><span class="metric-icon green">&#10003;</span><div><span>Present today</span><strong id="metric-present">0</strong><small id="metric-present-note">0% of roster</small></div></article>
+        <article class="metric-card"><span class="metric-icon orange">&#9711;</span><div><span>Need attention</span><strong id="metric-attention">0</strong><small>Below 85% attendance</small></div></article>
+        <article class="metric-card"><span class="metric-icon violet">&#9733;</span><div><span>Top performers</span><strong id="metric-top">0</strong><small>Grade A- or above</small></div></article>
+      </section>
+      <section class="spotlight-card" id="student-spotlight" aria-live="polite"></section>
+      <section class="content-section" id="students" aria-labelledby="students-heading">
+        <div class="section-header"><div><p class="eyebrow">Roster</p><h2 id="students-heading">Students <span id="result-count" class="result-count"></span></h2></div><div class="list-actions"><label class="search-field"><span aria-hidden="true">&#9906;</span><input id="student-search" type="search" autocomplete="off" placeholder="Search name, ID, or department" aria-label="Search students"></label><button class="button button-secondary" type="button" data-action="open-filter"><span aria-hidden="true">&#9776;</span> Filters <span class="filter-dot" id="filter-dot" hidden></span></button><button class="button button-primary compact" type="button" data-action="open-add"><span aria-hidden="true">+</span> Add</button></div></div>
+        <div class="active-filter-row" id="active-filters" hidden></div>
+        <div class="student-grid" id="student-grid" aria-live="polite"></div>
+        <div class="empty-state" id="empty-state" hidden><div class="empty-icon">&#9906;</div><h3>No students found</h3><p>Try another search term or clear the active filters.</p><button class="button button-secondary" type="button" data-action="clear-filters">Clear filters</button></div>
+      </section>
+      <section class="content-section attendance-section" id="attendance" aria-labelledby="attendance-heading">
+        <div class="section-header"><div><p class="eyebrow">Daily check-in</p><h2 id="attendance-heading">Today's attendance</h2></div><p class="section-helper">Changes save automatically in this browser.</p></div>
+        <div class="attendance-table-wrap"><table class="attendance-table"><thead><tr><th>Student</th><th>Batch</th><th>Attendance</th><th>Today</th><th><span class="sr-only">Action</span></th></tr></thead><tbody id="attendance-body"></tbody></table></div>
+      </section>
+    </main>
+  </div>
+  <div class="drawer-backdrop" id="drawer-backdrop" hidden></div>
+  <aside class="drawer" id="drawer" aria-modal="true" aria-labelledby="drawer-title" role="dialog" aria-hidden="true" tabindex="-1"><header class="drawer-header"><div><p class="eyebrow" id="drawer-eyebrow">Manage roster</p><h2 id="drawer-title">Panel</h2></div><button class="icon-button" id="drawer-close" type="button" aria-label="Close panel">&#215;</button></header><div class="drawer-content" id="drawer-content"></div></aside>
+  <div class="toast-region" id="toast-region" aria-live="polite" aria-atomic="true"></div>
+  <script src="app.js"></script>
+</body>
+</html>
+
+

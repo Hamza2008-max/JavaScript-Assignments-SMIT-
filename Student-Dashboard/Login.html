@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090b14">
+  <title>Sign in | Student Portal</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="login-page">
+  <main class="login-shell">
+    <section class="login-intro" aria-labelledby="portal-title">
+      <a class="brand" href="Login.html"><img src="logo.svg" alt="" width="44" height="44"><span><strong id="portal-title">Student Portal</strong><small>Admin workspace</small></span></a>
+      <div class="login-intro-copy"><p class="eyebrow accent">One place, clear progress</p><h1>Every learner deserves a clear path forward.</h1><p>Manage student records, check attendance, and keep your class on track from one focused workspace.</p></div>
+      <div class="credential-card"><span class="credential-icon" aria-hidden="true">&#10022;</span><div><strong>Demo access</strong><p>Username: <b>Admin</b> &nbsp;&middot;&nbsp; Password: <b>1234</b></p></div></div>
+    </section>
+    <section class="login-card" aria-labelledby="signin-heading">
+      <div><p class="eyebrow">Administrator access</p><h2 id="signin-heading">Welcome back</h2><p class="login-subtitle">Sign in to open your student dashboard.</p></div>
+      <form id="login-form" class="login-form" novalidate>
+        <div class="login-error" id="login-error" role="alert"></div>
+        <label for="username">Username<input type="text" id="username" name="username" autocomplete="username" placeholder="Enter username" required autofocus></label>
+        <label for="password">Password<div class="password-wrap"><input type="password" id="password" name="password" autocomplete="current-password" placeholder="Enter password" required><button id="password-toggle" type="button" aria-label="Show password">Show</button></div></label>
+        <button class="button button-primary login-submit" id="login-submit" type="submit">Sign in <span aria-hidden="true">&#8594;</span></button>
+      </form>
+      <p class="login-footnote">Demo portal &middot; Your changes are saved locally in this browser.</p>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
+
+
